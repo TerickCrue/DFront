@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(18, 2, 2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#keys-container{
+    width: max-content;
+    display: flex;
+    background: transparent;
+    gap: 20px;
+}
+
+.key{
+    width: 108px;
+    height: 115px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(197, 255, 62, 1);
+}
+
+.key p{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: 64px;
+    font-weight: 700;
+    color: rgba(255, 247, 0, 1);
+}
+
+.active{
+    background: rgba(197, 255, 62, 1)!important;
+}
+
+.active p{
+    color: rgba(18, 2, 2, 1) !important;
+}
