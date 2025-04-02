@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+
+.contenedor-principal{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#pedidos{
+    width: 100%;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    gap: 16px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 32px;
+}
+
+#contenedor-pizzas{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: auto;
+    gap: 12px;
+}
+
+.pizza{
+    width: 100%;
+    min-height: 140px;
+    display: flex;
+    flex-direction: column;
+    background-image: url(assets/pizza.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column: span 4;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.pizza-footer p{
+    background: white;
+    margin: 0;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#contenedor-formulario{
+    width: 50%;
+}
+
+#ingredientes p{
+    text-align: center;
+    font-size: 16px;
+}
+
+#contenedor-formulario form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+form input{
+    width: calc(100% - 32px);
+    max-width: 280px;
+}
+
+form button{
+    height: 44px;
+    max-width: 140px;
+}
+
+#realizar-pedido{
+    padding: 32px;
+}
+
+@media (max-width: 768px) {
+    #pedidos{
+        flex-direction: column;
+    }
+    
+    #contenedor-formulario{
+        width: 100%;
+    }
+
+    #contenedor-pizzas {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contenedor-pizzas .pizza {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    #contenedor-pizzas {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
